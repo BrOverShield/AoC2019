@@ -1,18 +1,24 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
 int main ()
 {
-    char line[32];
+    std::string line;
     int answer = 0;
-    //std::vector<string> lines;
+    std::vector<int> lines;
     //std::ifstream file("inputtest_2.txt");
     std::ifstream file("input_2.txt");
     if (file.is_open())
     {
-        while (file.getline(line, 256, '\n'))
+        while(file.good())
         {
-            int mass = strtol(line, nullptr, 10);
+            int nb;
+            file >> nb;
+            lines.push_back(nb);
+        }
+        for (auto mass : lines)
+        {
             do
             {
                 float fCalculate = mass / 3;
@@ -25,12 +31,9 @@ int main ()
                 std::cout << fuel << " | (" << answer << ")" << std::endl;
                 mass = fuel;
             } while (mass > 0);
-            std::cout << "---" << std::endl;
         }
         file.close();
 
         std::cout << "ANSWER : " << answer << std::endl;
     }
-
-    
 }
