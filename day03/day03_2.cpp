@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <map>
-#include <numeric> // atoi
+#include <numeric> // iota
 #include <algorithm> // min_element
 
 int main()
