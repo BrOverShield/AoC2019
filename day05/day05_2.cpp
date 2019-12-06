@@ -25,7 +25,7 @@ int main()
     std::string input;
     std::vector<int> IntCodes;
     std::ifstream file("C:\\Users\\tmdud\\Documents\\GitHub\\AoC2019\\day05\\input.txt");
-    int ID = 1;
+    int ID = 5;
     if (file.is_open())
     {
         while(file.good())
@@ -162,6 +162,123 @@ int main()
                     }
                     std::cout << "TEST " << Target << std::endl;
                     ProgressionPointer += 2;
+                    break;
+                case 5:
+                    if (Param1Mode == 1)
+                    {
+                        Target = IntCodes[ProgressionPointer + 1];
+                    }
+                    else
+                    {
+                        TargetPointer = IntCodes[ProgressionPointer + 1];
+                        Target = IntCodes[TargetPointer];
+                    }
+                    if (Target != 0)
+                    {
+                        if (Param2Mode == 1)
+                        {
+                            ProgressionPointer = IntCodes[ProgressionPointer + 2];
+                        }
+                        else
+                        {
+                            TargetPointer = IntCodes[ProgressionPointer + 2];
+                            ProgressionPointer = IntCodes[TargetPointer];
+                        }   
+                    }
+                    else
+                    {
+                        ProgressionPointer += 3;
+                    }
+                    break;
+                case 6:
+                    if (Param1Mode == 1)
+                    {
+                        Target = IntCodes[ProgressionPointer + 1];
+                    }
+                    else
+                    {
+                        TargetPointer = IntCodes[ProgressionPointer + 1];
+                        Target = IntCodes[TargetPointer];
+                    }
+                    if (Target == 0)
+                    {
+                        if (Param2Mode == 1)
+                        {
+                            ProgressionPointer = IntCodes[ProgressionPointer + 2];
+                        }
+                        else
+                        {
+                            TargetPointer = IntCodes[ProgressionPointer + 2];
+                            ProgressionPointer = IntCodes[TargetPointer];
+                        }
+                        
+                        
+                    }
+                    else
+                    {
+                        ProgressionPointer += 3;
+                    }
+                    
+                    break;
+                case 7:
+                    if (Param1Mode == 1)
+                    {
+                        NumberA = IntCodes[ProgressionPointer + 1];
+                    }
+                    else
+                    {
+                        PointerA = IntCodes[ProgressionPointer + 1];
+                        NumberA = IntCodes[PointerA];
+                    }
+                    if (Param2Mode == 1)
+                    {
+                        NumberB = IntCodes[ProgressionPointer + 2];
+                    }
+                    else
+                    {
+                        PointerB = IntCodes[ProgressionPointer + 2];
+                        NumberB = IntCodes[PointerB];
+                    }
+                    DestinationPointer = IntCodes[ProgressionPointer + 3];
+                    if (NumberA < NumberB)
+                    {
+                        IntCodes[DestinationPointer] = 1;
+                    }
+                    else
+                    {
+                        IntCodes[DestinationPointer] = 0;
+                    }
+                    ProgressionPointer += 4;
+                    break;
+                case 8:
+                    if (Param1Mode == 1)
+                    {
+                        NumberA = IntCodes[ProgressionPointer + 1];
+                    }
+                    else
+                    {
+                        PointerA = IntCodes[ProgressionPointer + 1];
+                        NumberA = IntCodes[PointerA];
+                    }
+                    if (Param2Mode == 1)
+                    {
+                        NumberB = IntCodes[ProgressionPointer + 2];
+                    }
+                    else
+                    {
+                        PointerB = IntCodes[ProgressionPointer + 2];
+                        NumberB = IntCodes[PointerB];
+                    }
+                    DestinationPointer = IntCodes[ProgressionPointer + 3];
+                    if (NumberA == NumberB)
+                    {
+                        IntCodes[DestinationPointer] = 1;
+                    }
+                    else
+                    {
+                        IntCodes[DestinationPointer] = 0;
+                    }
+                    ProgressionPointer += 4;
                     break;
                 default:
                     std::cout << "ERROR : IntCodes[" << ProgressionPointer << "] = " << IntCodes[ProgressionPointer] << std::endl;
