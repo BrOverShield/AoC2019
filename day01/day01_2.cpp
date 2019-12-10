@@ -1,9 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <chrono>
+#include <vector>
 
 int main ()
 {
+    auto start = std::chrono::high_resolution_clock::now();
     std::string line;
     int answer = 0;
     std::vector<int> lines;
@@ -28,7 +31,7 @@ int main ()
                 {
                     answer += fuel;
                 }
-                std::cout << fuel << " | (" << answer << ")" << std::endl;
+                //std::cout << fuel << " | (" << answer << ")" << std::endl;
                 mass = fuel;
             } while (mass > 0);
         }
@@ -36,4 +39,7 @@ int main ()
 
         std::cout << "ANSWER : " << answer << std::endl;
     }
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+    std::cout << "Time is : " << duration.count() << " Nanoseconds" << std::endl;
 }

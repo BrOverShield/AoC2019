@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <numeric>
+#include <chrono>
 
 std::vector<int> split(std::string s, std::string delimiter)
 {
@@ -23,6 +24,7 @@ std::vector<int> split(std::string s, std::string delimiter)
 
 int main()
 {
+    auto start = std::chrono::high_resolution_clock::now();
     std::string input;
     std::vector<int> IntCodes;
     std::ifstream file("input.txt");
@@ -84,16 +86,18 @@ int main()
                 std::cout << "ANSWER : " << IntCodes[0] << " | FirstNumber : " << FirstNumber << " & SecondNumber : " << SecondNumber << std::endl;
                 AnswerIsFound = true;
             }
-            else
-            {
-                if(!AnswerIsFound)
-                {
-                    std::cout << "NOT : " << IntCodes[0] << " | FirstNumber : " << FirstNumber << " & SecondNumber : " << SecondNumber << std::endl;
-                }
-            }
+            // else
+            // {
+            //     if(!AnswerIsFound)
+            //     {
+            //         //std::cout << "NOT : " << IntCodes[0] << " | FirstNumber : " << FirstNumber << " & SecondNumber : " << SecondNumber << std::endl;
+            //     }
+            // }
         }
     }
     
-
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+    std::cout << "Time is : " << duration.count() << " Milliseconds" << std::endl;
     
 }

@@ -4,6 +4,7 @@
 #include <string> // to_string(), stoi()
 #include <map>
 #include <numeric> // iota
+#include <chrono>
 
 std::vector<int> split(std::string s, std::string delimiter)
 {
@@ -32,6 +33,7 @@ class Configuration
 
 int main()
 {
+    auto start = std::chrono::high_resolution_clock::now();
     std::vector<int> Choices(5);
     std::iota(Choices.begin(), Choices.end(), 5);
     std::string input;
@@ -42,7 +44,8 @@ int main()
     int IntCode;
     int Amplifier = 0;
     char c;
-    std::ifstream file("C:\\Users\\tmdud\\Documents\\GitHub\\AoC2019\\day07\\input.txt");
+    //std::ifstream file("C:\\Users\\tmdud\\Documents\\GitHub\\AoC2019\\day07\\input.txt");
+    std::ifstream file("input.txt");
     std::ifstream PhaseFile("C:\\Users\\tmdud\\Documents\\GitHub\\AoC2019\\day07\\phasetest1.txt");
     int ID = 0;
     if (file.is_open())
@@ -243,7 +246,7 @@ int main()
                             Amplifier = Target;
                             config.Amplifier = Target;
                             IsDataSent = true;
-                            std::cout << i << " | " << Phases[0] << Phases[1] << Phases[2] << Phases[3] << Phases[4] << " | " << Target << std::endl;
+                            // std::cout << i << " | " << Phases[0] << Phases[1] << Phases[2] << Phases[3] << Phases[4] << " | " << Target << std::endl;
                             ProgressionPointers[i] += 2;
                             break;
                         case 5:
@@ -393,15 +396,19 @@ int main()
         {
             max = config.Amplifier;
             Phases = config.Phases;
-            Loop = config.Loops;
-            std::cout << "NEW MAX : " << max << " | PHASES : " << Phases[0] << Phases[1] << Phases[2] << Phases[3] << Phases[4] << std::endl;
+            // Loop = config.Loops;
+            // std::cout << "NEW MAX : " << max << " | PHASES : " << Phases[0] << Phases[1] << Phases[2] << Phases[3] << Phases[4] << std::endl;
         }
-        if (config.Loops > maxLoops)
-        {
-            maxLoops = config.Loops;
-        }
+        // if (config.Loops > maxLoops)
+        // {
+        //     maxLoops = config.Loops;
+        // }
     }
 
     std::cout << "ANSWER : " << max << " | " << Loop << std::endl;
-    std::cout << "MAX LOOP : " << maxLoops << std::endl;
+    // std::cout << "MAX LOOP : " << maxLoops << std::endl;
+
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+    std::cout << "Time is : " << duration.count() << " Milliseconds" << std::endl;
 }

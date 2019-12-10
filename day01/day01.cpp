@@ -1,8 +1,10 @@
 #include <iostream>
 #include <fstream>
+#include <chrono>
 
 int main ()
 {
+    auto start = std::chrono::high_resolution_clock::now();
     char line[32];
     int answer = 0;
     //std::vector<string> lines;
@@ -25,5 +27,7 @@ int main ()
         std::cout << "ANSWER : " << answer << std::endl;
     }
 
-    
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+    std::cout << "Time is : " << duration.count() << " Milliseconds" << std::endl;
 }
