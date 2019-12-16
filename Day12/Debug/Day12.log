@@ -1,24 +1,27 @@
-﻿  Part2.cpp
-C:\Users\tmdud\Documents\GitHub\AoC2019\Day12\Part2.cpp(28,78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\tmdud\Documents\GitHub\AoC2019\Day12\Part2.cpp(49,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\tmdud\Documents\GitHub\AoC2019\Day12\Part2.cpp(69,9): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-C:\Users\tmdud\Documents\GitHub\AoC2019\Day12\Part2.cpp(11,6): warning C4101: 'TotalEnergy': unreferenced local variable
-C:\Users\tmdud\Documents\GitHub\AoC2019\Day12\Part2.cpp(79,42): warning C4018: '<': signed/unsigned mismatch
-C:\Users\tmdud\Documents\GitHub\AoC2019\Day12\Part2.cpp(77,6): warning C4101: 'PeriodIterations': unreferenced local variable
-C:\Users\tmdud\Documents\GitHub\AoC2019\Day12\Part2.cpp(76,6): warning C4101: 'PeriodIteration': unreferenced local variable
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\numeric(35,33): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
-          with
-          [
-              _Ty=double
-          ]
-C:\Users\tmdud\Documents\GitHub\AoC2019\Day12\Part2.cpp(67): message : see reference to function template instantiation '_Ty std::accumulate<double*,int,int(__cdecl *)(int,int)>(const _InIt,const _InIt,_Ty,_Fn)' being compiled
-          with
-          [
-              _Ty=int,
-              _InIt=double *,
-              _Fn=int (__cdecl *)(int,int)
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\chrono(632): message : see reference to class template instantiation 'std::chrono::duration<double,std::ratio<1,1>>' being compiled
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\chrono(178): message : see reference to class template instantiation 'std::chrono::duration<__int64,std::nano>' being compiled
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\chrono(610): message : see reference to class template instantiation 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>' being compiled
-  Day12.vcxproj -> C:\Users\tmdud\Documents\GitHub\AoC2019\Day12\Debug\Day12.exe
+﻿  AoCutils.cpp
+  Main.cpp
+  Part2.cpp
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(28,78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(49,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(69,9): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(11,6): warning C4101: 'TotalEnergy': unreferenced local variable
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(79,42): warning C4018: '<': signed/unsigned mismatch
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(77,6): warning C4101: 'PeriodIterations': unreferenced local variable
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(76,6): warning C4101: 'PeriodIteration': unreferenced local variable
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\numeric(31,33): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\numeric(31,33): warning C4244:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\numeric(31,33): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\numeric(31,33): warning C4244:             _Ty=double
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\numeric(31,33): warning C4244:         ]
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(67): message : see reference to function template instantiation '_Ty std::accumulate<double*,int,int(__cdecl *)(int,int)>(const _InIt,const _InIt,_Ty,_Fn)' being compiled
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(67): message :         with
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(67): message :         [
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(67): message :             _Ty=int,
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(67): message :             _InIt=double *,
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(67): message :             _Fn=int (__cdecl *)(int,int)
+C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Part2.cpp(67): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\chrono(669): message : see reference to class template instantiation 'std::chrono::duration<double,std::ratio<1,1>>' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\chrono(177): message : see reference to class template instantiation 'std::chrono::duration<__int64,std::nano>' being compiled
+  Generating Code...
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\chrono(647): message : see reference to class template instantiation 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::steady_clock::duration>' being compiled
+  Day12.vcxproj -> C:\Users\PPoucH\Documents\GitHub\AoC2019\Day12\Debug\Day12.exe
