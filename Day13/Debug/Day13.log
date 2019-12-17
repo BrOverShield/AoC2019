@@ -1,2 +1,5 @@
 ﻿  Part1.cpp
-  Day13.vcxproj -> C:\Users\PPoucH\Documents\GitHub\AoC2019\Day13\Debug\Day13.exe
+C:\Users\tmdud\Documents\GitHub\AoC2019\Day13\Part1.cpp(47,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\tmdud\Documents\GitHub\AoC2019\Day13\Part1.cpp(52,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\tmdud\Documents\GitHub\AoC2019\Day13\Part1.cpp(58,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Day13.vcxproj -> C:\Users\tmdud\Documents\GitHub\AoC2019\Day13\Debug\Day13.exe

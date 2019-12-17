@@ -378,5 +378,4 @@ int ExtractOpCode(double OpCode)
 		OpCode = stoi(sOpCode);
 		return OpCode;
 	}
-	
 }
