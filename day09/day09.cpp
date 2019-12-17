@@ -49,7 +49,7 @@ int main()
     double IntCode;
     char c;
     // std::ifstream file("C:\\Users\\tmdud\\Documents\\GitHub\\AoC2019\\day07\\input.txt");
-    std::ifstream file("C:\\Users\\PPoucH\\Documents\\GitHub\\AoC2019\\day09\\input.txt");
+    std::ifstream file("C:\\Users\\PPoucH\\Documents\\GitHub\\AoC2019\\day09\\inputtest1.txt");
     if (file.is_open())
     {
         while (file.good())
